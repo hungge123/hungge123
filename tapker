@@ -1,0 +1,18 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ClickerButton : MonoBehaviour
+{
+    public Text clickCountText; // Reference to the UI text to display click count
+    private int clickCount = 0; // Initialize click count to 0
+
+    // This function is called when the button is clicked
+    public void OnClick()
+    {
+        // Increase the click count by 1
+        clickCount++;
+
+        // Update the text to display the new click count
+        clickCountText.text = "Clicks: " + clickCount.ToString();
+    }
+}
